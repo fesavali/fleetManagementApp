@@ -14,10 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
-Route::post('register_vehicle',[\App\Http\Controllers\VehicleController::class,'store'])->name('register_vehicle');
+Route::post('/register_vehicle',[\App\Http\Controllers\VehicleController::class,'store'])->name('register_vehicle');
 
 
 Auth::routes();
