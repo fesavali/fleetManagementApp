@@ -62,6 +62,12 @@
   <div class="gradient-custom-1 h-100">
     <div class="mask d-flex align-items-center h-100">
       <div class="container">
+      @if (session('successMsg'))
+        <div class="alert alert-success" role="alert">
+             {{ session('successMsg') }}
+         </div>
+    @endif
+    <br>
         <div class="row justify-content-center">
           <div class="col-12">
             <div class="table-responsive bg-white">
@@ -82,7 +88,6 @@
                 </thead>
                 <tbody>
                   <tr>
-                  @foreach($vehicles as $vehicle)
                     <th scope="row" style="color: #666666;">{{ $vehicle->id }}</th>
                     <td>{{ $vehicle->vehicle_registration_number }}</td>
                     <td>{{ $vehicle->client_details }}</td>
@@ -96,7 +101,6 @@
            Print Certificate</a> 
         </td>
                   </tr>
-                @endforeach
                 </tbody>
               </table>
             </div>
