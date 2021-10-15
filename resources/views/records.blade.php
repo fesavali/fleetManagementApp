@@ -56,6 +56,7 @@
 </head>
 
 <body class="{{ $class ?? '' }}">
+    
 <!-- Remove the container if you want to extend the Footer to full width. -->
 <section class="intro">
   <div class="gradient-custom-1 h-100">
@@ -75,6 +76,7 @@
                     <th scope="col">Chassis Number</th>
                     <th scope="col">Engine</th>
                     <th scope="col">Color</th>
+                    <th scope="col">Action</th>
                     
                   </tr>
                 </thead>
