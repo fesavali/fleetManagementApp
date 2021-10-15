@@ -25,6 +25,8 @@ Route::get('/records', 'App\Http\Controllers\fleetRecords@index')->name('records
 
 Route::get('/Print Tracking Certificate{id}', 'App\Http\Controllers\fleetRecords@print')->name('printPdf')->middleware(['auth']);
 
+Route::get('/FindRecord', 'App\Http\Controllers\fleetRecords@search')->name('search')->middleware(['auth']);
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Auth::routes();
 

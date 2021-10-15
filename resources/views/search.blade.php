@@ -7,7 +7,7 @@
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Fleet Records</title>
+    <title>Search</title>
     <!-- Favicon -->
     <link href="{{ asset('argon') }}/img/brand/favicon.png" rel="icon" type="image/png">
     <!-- Fonts -->
@@ -61,18 +61,7 @@
 <section class="intro">
   <div class="gradient-custom-1 h-100">
     <div class="mask d-flex align-items-center h-100">
-      
       <div class="container">
-              <div class="col-12">
-              <div class="input-group col-7">
-          <form action="{{ route('search') }}" method="POST">
-          <input type="search" class="form-control rounded" placeholder="Search with Vehicle Registration(Number Plate)" aria-label="Search"
-          aria-describedby="search-addon"/>
-          <button type="submit" name="submit" class="btn btn-outline-primary">search</button>
-          </form>
-        </div>
-        <br>
-        </div>
         <div class="row justify-content-center">
           <div class="col-12">
             <div class="table-responsive bg-white">

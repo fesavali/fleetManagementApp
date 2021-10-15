@@ -15,4 +15,7 @@ class fleetRecords extends Controller
        $vehicle = Vehicle::find($id);
        return view('CertPdf', compact('vehicle'));
    }
+   public function search(){
+       return view('search');
+   }
 }
