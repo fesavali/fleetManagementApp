@@ -56,7 +56,7 @@
 </head>
 
 <body class="{{ $class ?? '' }}">
-    
+
 <!-- Remove the container if you want to extend the Footer to full width. -->
 <section class="intro">
   <div class="gradient-custom-1 h-100">
@@ -91,6 +91,10 @@
                     <td>{{ $vehicle->chassis_number }}</td>
                     <td>{{ $vehicle->engine_number }}</td>
                     <td>{{ $vehicle->color }}</td>
+                    <td>
+          <a class="btn btn-raised btn-primary btn-sm" href="{{ route('printPdf', $vehicle->id) }}"><i class="fas fa-file-pdf"></i>
+           Print Certificate</a> 
+        </td>
                   </tr>
                 @endforeach
                 </tbody>

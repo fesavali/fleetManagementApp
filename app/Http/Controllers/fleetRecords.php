@@ -11,4 +11,8 @@ class fleetRecords extends Controller
        $vehicles = Vehicle::paginate(11);
        return view('records', compact('vehicles'));
    }
+   public function print(){
+       $vehicle = Vehicle::find($id);
+       return view('CertPdf', compact('vehicle'));
+   }
 }
