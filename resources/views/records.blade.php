@@ -63,16 +63,18 @@
     <div class="mask d-flex align-items-center h-100">
       
       <div class="container">
-              <form action="{{ route('search') }}" method="POST">
-                      @if (session('errorMsg'))
+      @if (session('errorMsg'))
                           <div class="alert alert-danger" role="alert">
                                 {{ session('errorMsg') }}
                           </div>
-                      @endif    
+                      @endif
+              <form action="{{ route('search') }}" method="POST">
+              {{ csrf_field() }}
+                          
               <div class="col-12">
               <div class="input-group col-7">
          
-          <input type="search" class="form-control rounded" placeholder="Search with Vehicle Registration(Number Plate)" aria-label="Search"
+          <input type="search" class="form-control rounded" id="vehicle_registration_number" name="vehicle_registration_number" placeholder="Search with Vehicle Registration(Number Plate)" aria-label="Search"
           aria-describedby="search-addon"/>
           <button type="submit" name="submit" class="btn btn-outline-primary">search</button>
           </form>
