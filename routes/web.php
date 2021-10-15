@@ -21,6 +21,7 @@ Route::post('/register_vehicle',[\App\Http\Controllers\VehicleController::class,
 
 
 Auth::routes();
+Route::get('/records', 'App\Http\Controllers\fleetRecords@index')->name('records')->middleware(['auth']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Auth::routes();
