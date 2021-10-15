@@ -69,14 +69,14 @@
                                 {{ session('errorMsg') }}
                           </div>
                       @endif
-              <form action="{{ route('search') }}" method="POST">
+              <form action="{{ route('search') }}" method="GET">
               {{ csrf_field() }}
                           
               <div class="col-12">
               <div class="input-group col-7">
          
           <input type="search" class="form-control rounded" id="vehicle_registration_number" name="vehicle_registration_number" placeholder="Search with Vehicle Registration(Number Plate)" aria-label="Search"
-          aria-describedby="search-addon"/>
+          aria-describedby="search-addon" required/>
           <button type="submit" name="submit" class="btn btn-outline-primary">search</button>
           </form>
         </div>
