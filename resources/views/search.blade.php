@@ -89,14 +89,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row" style="color: #666666;">{{ $vehicle->id }}</th>
-                    <td>{{ $vehicle->vehicle_registration_number }}</td>
-                    <td>{{ $vehicle->client_details }}</td>
-                    <td>{{ $vehicle->vehicle_make }}</td>
-                    <td>{{ $vehicle->vehicle_model }}</td>
-                    <td>{{ $vehicle->chassis_number }}</td>
-                    <td>{{ $vehicle->engine_number }}</td>
-                    <td>{{ $vehicle->color }}</td>
+                    <th scope="row" style="color: #666666;">{{ $vehicles->id }}</th>
+                    <td>{{ $vehicles->vehicle_registration_number }}</td>
+                    <td>{{ $vehicles->client_details }}</td>
+                    <td>{{ $vehicles->vehicle_make }}</td>
+                    <td>{{ $vehicles->vehicle_model }}</td>
+                    <td>{{ $vehicles->chassis_number }}</td>
+                    <td>{{ $vehicles->engine_number }}</td>
+                    <td>{{ $vehicles->color }}</td>
                     <td>
           <a class="btn btn-raised btn-primary btn-sm" href="{{ route('printPdf', $vehicle->id) }}"><i class="fas fa-file-pdf"></i>
            Print Certificate</a> 

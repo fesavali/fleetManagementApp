@@ -21,12 +21,16 @@ class fleetRecords extends Controller
     ]);
     $vehicle = $request->vehicle_registration_number;
        try {
-        $vehicle = Vehicle::find($vehicle);
-        return view('search', compact('vehicle'))->with('successMsg','Vehicle Found');
+        $vehicles = Vehicle::select('id','vehicle_registration_number', 'client_details',
+         'vehicle_make', 'vehicle_model', 'chassis_number', 'engine_number',
+          'color')->where('vehicle_registration_number', $vehicle)->get();
+
+        return view('search', compact('vehicles'))->with('successMsg','Vehicle Found');
+        
      } catch (\Exception $e) { // It's actually a QueryException but this works too
         if ($e->getCode() == 23000) {
             // Deal with duplicate key error  
-            return redirect()->back()->with('errorMsg','This record does not exist');
+            return view('records')->with('errorMsg','This record does not exist');
         }
      }
    }
