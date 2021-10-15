@@ -83,6 +83,13 @@
                     </a>
                 </li>
             </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('records') }}">
+                        <i class="ni ni-tv-2 text-primary"></i> {{ __('View Records') }}
+                    </a>
+                </li>
+            </ul>
             <!-- Divider -->
             <hr class="my-3">
             <!-- Heading -->
