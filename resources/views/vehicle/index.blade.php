@@ -15,6 +15,19 @@
                                 Create new vehicle record:
                             </small>
                         </div>
+                        
+                            @if (session('successMsg'))
+                            <div class="alert alert-success" role="alert">
+                                {{ session('successMsg') }}
+                            </div>
+                            @endif
+                            
+                            @if (session('errorMsg'))
+                            <div class="alert alert-danger" role="alert">
+                                {{ session('errorMsg') }}
+                            </div>
+
+                            @endif
                         <form role="form" method="POST" action="{{ route('register_vehicle') }}">
                             @csrf
 
@@ -25,7 +38,13 @@
 
                                         <input class="form-control" placeholder="{{ __('vehicle registration number') }}" type="text" name="vehicle_registration_number"  required autofocus>
                                     </div>
+                                    @if ($errors->has('vehicle_registration_number'))
+                                    <span class="invalid-feedback" style="display: block;" role="alert">
+                                        <strong>{{ $errors->first('vehicle_registration_number') }}</strong>
+                                    </span>
+                                @endif
                                 </div>
+                                
                                 <div class="form-group col">
                                     <label>Client Details</label>
                                     <div class="input-group input-group-alternative">

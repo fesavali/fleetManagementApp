@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Vehicle;
 use Illuminate\Http\Request;
+use Illuminate\Database\QueryException;
 
 class VehicleController extends Controller
 {
@@ -55,19 +56,24 @@ class VehicleController extends Controller
         $other_interest=$request->input('other_interest');
         $color=$request->input('color');
 
-        $vehicle=Vehicle::create([
-            'other_interest'=>$other_interest,
-            'vehicle_registration_number'=>$vehicle_registration_number,
-            'client_details'=>$client_details,
-            'vehicle_make'=>$vehicle_make,
-            'vehicle_model'=>$vehicle_model,
-            'chassis_number'=>$chassis_number,
-            'engine_number'=>$engine_number,
-            'color'=>$color
-        ]);
-
-        return redirect()->back()->with('message','Vehicle Added successfully');
-
+        try {
+            $vehicle=Vehicle::create([
+                'other_interest'=>$other_interest,
+                'vehicle_registration_number'=>$vehicle_registration_number,
+                'client_details'=>$client_details,
+                'vehicle_make'=>$vehicle_make,
+                'vehicle_model'=>$vehicle_model,
+                'chassis_number'=>$chassis_number,
+                'engine_number'=>$engine_number,
+                'color'=>$color
+            ]);
+            return redirect()->back()->with('successMsg','Vehicle Added successfully');
+         } catch (\Exception $e) { // It's actually a QueryException but this works too
+            if ($e->getCode() == 23000) {
+                // Deal with duplicate key error  
+                return redirect()->back()->with('errorMsg','This record already exists');
+            }
+         }
     }
 
     /**
@@ -113,5 +119,9 @@ class VehicleController extends Controller
     public function destroy(Vehicle $vehicle)
     {
         //
+    }
+    public function down()
+    {
+        Schema::dropIfExists('vehicle');
     }
 }
