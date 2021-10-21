@@ -1,5 +1,6 @@
 <?php
 echo $search;
+
 ?>
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -92,16 +93,16 @@ echo $search;
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row" style="color: #666666;">{{ $vehicles->id }}</th>
-                    <td>{{ $vehicles->vehicle_registration_number }}</td>
-                    <td>{{ $vehicles->client_details }}</td>
-                    <td>{{ $vehicles->vehicle_make }}</td>
-                    <td>{{ $vehicles->vehicle_model }}</td>
-                    <td>{{ $vehicles->chassis_number }}</td>
-                    <td>{{ $vehicles->engine_number }}</td>
-                    <td>{{ $vehicles->color }}</td>
+                    <th scope="row" style="color: #666666;"></th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                     <td>
-          <a class="btn btn-raised btn-primary btn-sm" href="{{ route('printPdf', $vehicle->id) }}"><i class="fas fa-file-pdf"></i>
+          <a class="btn btn-raised btn-primary btn-sm" href="#"><i class="fas fa-file-pdf"></i>
            Print Certificate</a> 
         </td>
                   </tr>
