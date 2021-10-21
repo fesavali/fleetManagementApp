@@ -1,6 +1,10 @@
 <?php
 echo $search;
-$sql = SELECT * FROM vehicles WHERE vehicle_registration_number = $search;
+$conn = mysqli_connect('localhost', 'root', '', 'fleetdb');
+$sql =  "SELECT * FROM `vehicles` WHERE vehicle_registration_number = $search;"
+$result = mysqli_query($conn,$sql);
+      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+      $count = mysqli_num_rows($result);
 ?>
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
