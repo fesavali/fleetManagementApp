@@ -1,6 +1,6 @@
 <?php
 echo $search;
-
+$sql = SELECT * FROM vehicles WHERE vehicle_registration_number = $search;
 ?>
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
