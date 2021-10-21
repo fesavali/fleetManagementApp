@@ -99,14 +99,14 @@ $result = mysqli_query($conn,$sql);
                     <?php
                     if($count == 1){
                     ?>
-                    <th scope="row" style="color: #666666;"><?php $row['id'] ?></th>
-                    <td><?php $row['vehicle_registration_number'] ?></td>
-                    <td><?php $row['client_details'] ?></td>
-                    <td><?php $row['vehicle_make'] ?></td>
-                    <td><?php $row['vehicle_model'] ?></td>
-                    <td><?php $row['chassis_number'] ?></td>
-                    <td><?php $row['engine_number'] ?></td>
-                    <td><?php $row['color'] ?></td>
+                    <th scope="row" style="color: #666666;"><?php echo $row['id']; ?></th>
+                    <td><?php echo $row['vehicle_registration_number']; ?></td>
+                    <td><?php echo $row['client_details']; ?></td>
+                    <td><?php echo $row['vehicle_make']; ?></td>
+                    <td><?php echo $row['vehicle_model']; ?></td>
+                    <td><?php echo $row['chassis_number']; ?></td>
+                    <td><?php echo $row['engine_number']; ?></td>
+                    <td><?php echo $row['color']; ?></td>
                     <td>
           <a class="btn btn-raised btn-primary btn-sm" href="{{ route('printPdf', $row['id']) }}"><i class="fas fa-file-pdf"></i>
            Print Certificate</a> 
