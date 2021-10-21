@@ -1,5 +1,4 @@
 <?php
-echo $search;
 $conn = mysqli_connect('localhost', 'root', '', 'fleetdb');
 $sql =  "SELECT * FROM `vehicles` WHERE vehicle_registration_number = '$search'";
 $result = mysqli_query($conn,$sql);
@@ -100,23 +99,23 @@ $result = mysqli_query($conn,$sql);
                     <?php
                     if($count == 1){
                     ?>
-                    <th scope="row" style="color: #666666;"></th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <?php
-                      }else{
-                        return view('search', compact('search'))->with('successMsg','Vehicle Found');
-                      }
-                    ?>
+                    <th scope="row" style="color: #666666;"><?php $row['id'] ?></th>
+                    <td><?php $row['vehicle_registration_number'] ?></td>
+                    <td><?php $row['client_details'] ?></td>
+                    <td><?php $row['vehicle_make'] ?></td>
+                    <td><?php $row['vehicle_model'] ?></td>
+                    <td><?php $row['chassis_number'] ?></td>
+                    <td><?php $row['engine_number'] ?></td>
+                    <td><?php $row['color'] ?></td>
                     <td>
-          <a class="btn btn-raised btn-primary btn-sm" href="#"><i class="fas fa-file-pdf"></i>
+          <a class="btn btn-raised btn-primary btn-sm" href="{{ route('printPdf', $row['id']) }}"><i class="fas fa-file-pdf"></i>
            Print Certificate</a> 
-        </td>
+                    </td>
+                           <?php
+                                }else{
+                                  return view('records')->with('errorMsg','Vehicle Not Found');
+                                }
+                              ?>
                   </tr>
                 </tbody>
               </table>
