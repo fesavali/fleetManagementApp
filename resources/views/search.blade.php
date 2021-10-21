@@ -15,7 +15,7 @@ $result = mysqli_query($conn,$sql);
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Search</title>
+    <title>Fleet Management | Search</title>
     <!-- Favicon -->
     <link href="{{ asset('argon') }}/img/brand/favicon.png" rel="icon" type="image/png">
     <!-- Fonts -->
@@ -97,6 +97,9 @@ $result = mysqli_query($conn,$sql);
                 </thead>
                 <tbody>
                   <tr>
+                    <?php
+                    if($count == 1){
+                    ?>
                     <th scope="row" style="color: #666666;"></th>
                     <td></td>
                     <td></td>
@@ -105,6 +108,11 @@ $result = mysqli_query($conn,$sql);
                     <td></td>
                     <td></td>
                     <td></td>
+                    <?php
+                      }else{
+                        return view('search', compact('search'))->with('successMsg','Vehicle Found');
+                      }
+                    ?>
                     <td>
           <a class="btn btn-raised btn-primary btn-sm" href="#"><i class="fas fa-file-pdf"></i>
            Print Certificate</a> 
