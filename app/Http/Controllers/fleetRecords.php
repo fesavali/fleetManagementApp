@@ -19,13 +19,13 @@ class fleetRecords extends Controller
 
         $search = $request->input('vehicle_registration_number');
 
-        $vehicles = Vehicle::query('id','vehicle_registration_number', 'client_details',
-         'vehicle_make', 'vehicle_model', 'chassis_number', 'engine_number',
-          'color')
-          ->where('vehicle_registration_number', "%{$search}%")
-          ->get();
+        // $vehicles = Vehicle::query('id','vehicle_registration_number', 'client_details',
+        //  'vehicle_make', 'vehicle_model', 'chassis_number', 'engine_number',
+        //   'color')
+        //   ->where('vehicle_registration_number', "%{$search}%")
+        //   ->get();
 
-        return view('search', compact('vehicles'))->with('successMsg','Vehicle Found');
+        return view('search', compact('search'))->with('successMsg','Vehicle Found');
 
      } 
    }
