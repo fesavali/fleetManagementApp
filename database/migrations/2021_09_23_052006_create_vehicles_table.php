@@ -22,7 +22,7 @@ class CreateVehiclesTable extends Migration
             $table->string('chassis_number')->unique();
             $table->string('engine_number')->unique();
             $table->string('color');
-            $table->uniqid("serial");
+            $table->string('serial');
             $table->longText('other_interest');
             $table->timestamps();
         });

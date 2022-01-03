@@ -8,12 +8,20 @@ $pdf->SetFont('Arial','B',16);
 $img1 = '../resources/fleet.jpg';
 $pdf->Image($img1,0,0,211,300);
 
+$pdf->Ln(-1);
+$x = $pdf->GetX();
+$y = $pdf->GetY();
+$pdf->SetXY($x + 120, $y +3);
+$pdf->SetFont('Times','BU',14);
+$pdf->Cell(55, 5,"Serial No: $vehicle->serial", 0, 0);
+
+
 $pdf->Ln(0);
 $x = $pdf->GetX();
 $y = $pdf->GetY();
 $pdf->SetXY($x + 43, $y +107);
 $pdf->SetFont('Times','',14);
-$pdf->Cell(55, 5, date("d/m/Y", strtotime($vehicle->created_at)).date("h:i a", strtotime($vehicle->created_at)), 0, 0);
+// $pdf->Cell(55, 5, date("d/m/Y", strtotime($vehicle->created_at)).date("h:i a", strtotime($vehicle->created_at)), 0, 0);
 $pdf->Ln(1);
 $x = $pdf->GetX();
 $y = $pdf->GetY();
