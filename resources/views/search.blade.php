@@ -90,6 +90,8 @@ $result = mysqli_query($conn,$sql);
                     <th scope="col">Chassis Number</th>
                     <th scope="col">Engine</th>
                     <th scope="col">Color</th>
+                    <th scope="col">Installation Date</th>
+                    <th scope="col">Serial No.</th>
                     <th scope="col">Action</th>
                     
                   </tr>
@@ -107,6 +109,8 @@ $result = mysqli_query($conn,$sql);
                     <td><?php echo $row['chassis_number']; ?></td>
                     <td><?php echo $row['engine_number']; ?></td>
                     <td><?php echo $row['color']; ?></td>
+                    <td><?php echo $row['instal_date']; ?></td>
+                    <td><?php echo $row['serial']; ?></td>
                     <td>
           <a class="btn btn-raised btn-primary btn-sm" href="{{ route('printPdf', $row['id']) }}"><i class="fas fa-file-pdf"></i>
            Print Certificate</a> 

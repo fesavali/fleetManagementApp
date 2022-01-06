@@ -23,6 +23,7 @@ class CreateVehiclesTable extends Migration
             $table->string('engine_number')->unique();
             $table->string('color');
             $table->string('serial');
+            $table->string('instal_date');
             $table->longText('other_interest');
             $table->timestamps();
         });

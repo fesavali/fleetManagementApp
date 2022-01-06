@@ -10,6 +10,6 @@ class Vehicle extends Model
     use HasFactory;
 
     protected  $fillable = ['vehicle_registration_number','client_details',
-        'vehicle_make','vehicle_model','chassis_number','engine_number','color','serial','other_interest'];
+        'vehicle_make','vehicle_model','chassis_number','engine_number','color','serial','instal_date','other_interest'];
 
 }

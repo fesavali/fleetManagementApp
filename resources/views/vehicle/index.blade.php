@@ -80,16 +80,32 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label>Color</label>
-                                <div class="input-group input-group-alternative">
-                                    <input class="form-control" name="color" placeholder="{{ __('Color') }}" type="text"  required>
+                            <div class="row">
+                                <div class="form-group col">
+                                    <label>Color</label>
+                                    <div class="input-group input-group-alternative">
+                                        <input class="form-control" name="color" placeholder="{{ __('Color') }}" type="text"  required>
+                                    </div>
+                                </div>
+                                <div class="form-group col">
+                                    <label>Serial Number</label>
+                                    <div class="input-group input-group-alternative">
+                                        <input class="form-control" name="serial_number" placeholder="{{ __('Serial Number') }}" type="text"  required>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label>Other Interests</label>
-                                <div class="input-group input-group-alternative">
-                                    <input class="form-control" name="other_interest" placeholder="{{ __('Other Interests') }}" type="text"  required>
+                            <div class="row">
+                                <div class="form-group col">
+                                    <label>Date</label>
+                                    <div class="input-group input-group-alternative">
+                                        <input class="form-control" name="date" placeholder="{{ __('Installation Date') }}" type="date"  required>
+                                    </div>
+                                </div>
+                                <div class="form-group col">
+                                    <label>Other Interests</label>
+                                    <div class="input-group input-group-alternative">
+                                        <input class="form-control" name="other_interest" placeholder="{{ __('Other Interests') }}" type="text"  required>
+                                    </div>
                                 </div>
                             </div>
                             <div class="text-center">

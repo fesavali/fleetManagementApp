@@ -45,6 +45,8 @@ class VehicleController extends Controller
             'chassis_number'=>'required',
             'engine_number'=>'required',
             'color'=>'required',
+            'serial_number'=>'required',
+            'date'=>'required'
         ]);
 
         $vehicle_registration_number=$request->input('vehicle_registration_number');
@@ -55,7 +57,8 @@ class VehicleController extends Controller
         $engine_number=$request->input('engine_number');
         $other_interest=$request->input('other_interest');
         $color=$request->input('color');
-        $serial=uniqid("AA");
+        $instal_date=$request->input('date');
+        $serial=$request->input('serial_number');
 
         try {
             $vehicle=Vehicle::create([
@@ -67,7 +70,8 @@ class VehicleController extends Controller
                 'chassis_number'=>$chassis_number,
                 'engine_number'=>$engine_number,
                 'color'=>$color,
-                'serial'=>$serial
+                'serial'=>$serial,
+                'instal_date'=>$instal_date
             ]);
             return redirect()->back()->with('successMsg','Vehicle Added successfully');
          } catch (\Exception $e) { // It's actually a QueryException but this works too

@@ -21,7 +21,7 @@ $x = $pdf->GetX();
 $y = $pdf->GetY();
 $pdf->SetXY($x + 43, $y +106);
 $pdf->SetFont('Times','',14);
-// $pdf->Cell(55, 5, date("d/m/Y", strtotime($vehicle->created_at)).date("h:i a", strtotime($vehicle->created_at)), 0, 0);
+$pdf->Cell(55, 5, date("d/m/Y", strtotime($vehicle->instal_date)), 0, 0);
 $pdf->Ln(1);
 $x = $pdf->GetX();
 $y = $pdf->GetY();

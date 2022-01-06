@@ -96,6 +96,8 @@
                     <th scope="col">Chassis Number</th>
                     <th scope="col">Engine</th>
                     <th scope="col">Color</th>
+                    <th scope="col">Installation Date</th>
+                    <th scope="col">Serial No.</th>
                     <th scope="col">Action</th>
                     
                   </tr>
@@ -111,6 +113,8 @@
                     <td>{{ $vehicle->chassis_number }}</td>
                     <td>{{ $vehicle->engine_number }}</td>
                     <td>{{ $vehicle->color }}</td>
+                    <td>{{ $vehicle->instal_date }}</td>
+                    <td>{{ $vehicle->serial }}</td>
                     <td>
           <a class="btn btn-raised btn-primary btn-sm" href="{{ route('printPdf', $vehicle->id) }}"><i class="fas fa-file-pdf"></i>
            Print Certificate</a> 
