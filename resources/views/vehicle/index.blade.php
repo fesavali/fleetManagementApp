@@ -96,18 +96,24 @@
                             </div>
                             <div class="row">
                                 <div class="form-group col">
-                                    <label>Date</label>
+                                    <label>Installation Date</label>
                                     <div class="input-group input-group-alternative">
                                         <input class="form-control" name="date" placeholder="{{ __('Installation Date') }}" type="date"  required>
                                     </div>
                                 </div>
                                 <div class="form-group col">
+                                    <label>Expiry Date</label>
+                                    <div class="input-group input-group-alternative">
+                                        <input class="form-control" name="expiry_date" placeholder="{{ __('Other Interests') }}" type="text"  required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
                                     <label>Other Interests</label>
                                     <div class="input-group input-group-alternative">
                                         <input class="form-control" name="other_interest" placeholder="{{ __('Other Interests') }}" type="text"  required>
                                     </div>
                                 </div>
-                            </div>
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary my-4">{{ __('CREATE') }}</button>
                             </div>
