@@ -70,6 +70,12 @@ $y = $pdf->GetY();
 $pdf->SetXY($x + 85, $y +2);
 $pdf->SetFont('Times','',12);
 $pdf->Cell(55, 5, $vehicle->other_interest, 0, 0);
+$pdf->Ln(9);
+$x = $pdf->GetX();
+$y = $pdf->GetY();
+$pdf->SetXY($x + 45, $y +14);
+$pdf->SetFont('Times','',12);
+$pdf->Cell(55, 5, date("d/m/Y", strtotime($vehicle->expiry_date)), 0, 0);
 
 $pdf->SetFont("Times","B",9);
 if (preg_match("/MSIE/i", $_SERVER["HTTP_USER_AGENT"])){
