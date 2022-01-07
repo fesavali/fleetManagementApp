@@ -46,7 +46,8 @@ class VehicleController extends Controller
             'engine_number'=>'required',
             'color'=>'required',
             'serial_number'=>'required',
-            'date'=>'required'
+            'date'=>'required',
+            'expiry_date'=>'required'
         ]);
 
         $vehicle_registration_number=$request->input('vehicle_registration_number');
@@ -58,6 +59,7 @@ class VehicleController extends Controller
         $other_interest=$request->input('other_interest');
         $color=$request->input('color');
         $instal_date=$request->input('date');
+        $expiry_date=$request->input('expiry_date');
         $serial=$request->input('serial_number');
 
         try {
@@ -72,6 +74,7 @@ class VehicleController extends Controller
                 'color'=>$color,
                 'serial'=>$serial,
                 'instal_date'=>$instal_date
+                'expiry_date'=>$expiry_date
             ]);
             return redirect()->back()->with('successMsg','Vehicle Added successfully');
          } catch (\Exception $e) { // It's actually a QueryException but this works too
