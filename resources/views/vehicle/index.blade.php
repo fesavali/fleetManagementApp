@@ -104,7 +104,7 @@
                                 <div class="form-group col">
                                     <label>Expiry Date</label>
                                     <div class="input-group input-group-alternative">
-                                        <input class="form-control" name="expiry_date" placeholder="{{ __('Other Interests') }}" type="text"  required>
+                                        <input class="form-control" name="expiry_date" placeholder="{{ __('Expiry Date') }}" type="text"  required>
                                     </div>
                                 </div>
                             </div>
