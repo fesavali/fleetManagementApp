@@ -15,7 +15,6 @@ class AddExpiryDateColumnsToVehiclesTable extends Migration
     {
         Schema::table('vehicles', function (Blueprint $table) {
             $table->string('expiry_date');
-        
         });
     }
 
