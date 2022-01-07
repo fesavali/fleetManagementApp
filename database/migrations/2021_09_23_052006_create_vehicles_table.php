@@ -24,6 +24,7 @@ class CreateVehiclesTable extends Migration
             $table->string('color');
             $table->string('serial');
             $table->string('instal_date');
+            $table->string('expiry_date');
             $table->longText('other_interest');
             $table->timestamps();
         });
