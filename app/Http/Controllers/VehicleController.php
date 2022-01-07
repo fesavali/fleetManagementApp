@@ -73,7 +73,7 @@ class VehicleController extends Controller
                 'engine_number'=>$engine_number,
                 'color'=>$color,
                 'serial'=>$serial,
-                'instal_date'=>$instal_date
+                'instal_date'=>$instal_date,
                 'expiry_date'=>$expiry_date
             ]);
             return redirect()->back()->with('successMsg','Vehicle Added successfully');
