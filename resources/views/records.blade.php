@@ -88,7 +88,6 @@
               <table class="table mb-0">
                 <thead>
                   <tr>
-                  <th scope="col">#</th>
                     <th scope="col">Vehicle Registration</th>
                     <th scope="col">Client</th>
                     <th scope="col">Make</th>
@@ -105,7 +104,6 @@
                 <tbody>
                   <tr>
                   @foreach($vehicles as $vehicle)
-                    <th scope="row" style="color: #666666;">{{ $vehicle->id }}</th>
                     <td>{{ $vehicle->vehicle_registration_number }}</td>
                     <td>{{ $vehicle->client_details }}</td>
                     <td>{{ $vehicle->vehicle_make }}</td>

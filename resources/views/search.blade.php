@@ -83,7 +83,6 @@ $result = mysqli_query($conn,$sql);
               <table class="table mb-0">
                 <thead>
                   <tr>
-                  <th scope="col">#</th>
                     <th scope="col">Vehicle Registration</th>
                     <th scope="col">Client</th>
                     <th scope="col">Make</th>
@@ -102,7 +101,7 @@ $result = mysqli_query($conn,$sql);
                     <?php
                     if($count == 1){
                     ?>
-                    <th scope="row" style="color: #666666;"><?php echo $row['id']; ?></th>
+                    
                     <td><?php echo $row['vehicle_registration_number']; ?></td>
                     <td><?php echo $row['client_details']; ?></td>
                     <td><?php echo $row['vehicle_make']; ?></td>
