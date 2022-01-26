@@ -76,7 +76,22 @@ $y = $pdf->GetY();
 $pdf->SetXY($x + 45, $y +14);
 $pdf->SetFont('Times','',12);
 $pdf->Cell(55, 5, date("d/m/Y", strtotime($vehicle->expiry_date)), 0, 0);
-
+$pdf->Ln(10);
+$x = $pdf->GetX();
+$y = $pdf->GetY();
+$pdf->SetXY($x + 107, $y -2);
+$pdf->SetFont('Times','B',13);
+$pdf->setTextColor(0,101,68);
+$pdf->setFillColor(255,255,255, 0.9); 
+$pdf->Cell(55, 5, "Head of Business Development", 0, 0, 'C', TRUE);
+$pdf->Ln(11);
+$x = $pdf->GetX();
+$y = $pdf->GetY();
+$pdf->SetXY($x + 30, $y -11);
+$pdf->SetFont('Times','B',13);
+$pdf->setTextColor(0,101,68);
+$pdf->setFillColor(255,255,255, 0.9); 
+$pdf->Cell(55, 5, "Subscription Expiry Date", 0, 0, 'C', TRUE);
 $pdf->SetFont("Times","B",9);
 if (preg_match("/MSIE/i", $_SERVER["HTTP_USER_AGENT"])){
     header("Content-type: application/PDF");
