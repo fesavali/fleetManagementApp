@@ -93,7 +93,6 @@ $pdf->SetFont('Times','B',13);
 $pdf->setTextColor(0,101,68);
 $pdf->setFillColor(255,255,255, 0.9); 
 $pdf->Cell(55, 5, "Subscription Expiry Date", 0, 0, 'C', TRUE);
-$pdf->SetFont("Times","B",9);
 
 $pdf->Image($img2,135,223,25,12);
 
