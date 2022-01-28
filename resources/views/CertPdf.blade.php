@@ -6,6 +6,7 @@ $pdf = new FPDF('P', 'mm', 'A4' );
 $pdf->AddPage();
 $pdf->SetFont('Arial','B',16);
 $img1 = '../resources/fleet.jpg';
+$img2 = '../resources/TK Sign.png';
 $pdf->Image($img1,0,0,211,300);
 
 $pdf->Ln(-1);
@@ -93,6 +94,9 @@ $pdf->setTextColor(0,101,68);
 $pdf->setFillColor(255,255,255, 0.9); 
 $pdf->Cell(55, 5, "Subscription Expiry Date", 0, 0, 'C', TRUE);
 $pdf->SetFont("Times","B",9);
+
+$pdf->Image($img2,135,223,25,12);
+
 if (preg_match("/MSIE/i", $_SERVER["HTTP_USER_AGENT"])){
     header("Content-type: application/PDF");
 } else {
