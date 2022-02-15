@@ -7,7 +7,7 @@ $pdf->AddPage();
 $pdf->SetFont('Arial','B',16);
 $img1 = '../resources/fleet.jpg';
 $img2 = '../resources/TK Sign.png';
-$pdf->Image($img1,0,0,211,300);
+// $pdf->Image($img1,0,0,211,300);
 
 $pdf->Ln(-1);
 $x = $pdf->GetX();
@@ -84,7 +84,7 @@ $pdf->SetXY($x + 107, $y -2);
 $pdf->SetFont('Times','B',13);
 $pdf->setTextColor(0,101,68);
 $pdf->setFillColor(255,255,255, 0.9); 
-$pdf->Cell(55, 5, "Head of Business Development", 0, 0, 'C', TRUE);
+// $pdf->Cell(55, 5, "Head of Business Development", 0, 0, 'C', TRUE);
 $pdf->Ln(11);
 $x = $pdf->GetX();
 $y = $pdf->GetY();
