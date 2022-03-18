@@ -27,6 +27,6 @@ class fleetRecords extends Controller
 
         return view('search', compact('search'))->with('successMsg','Vehicle Found');
 
-     } 
+     }
    }
 
